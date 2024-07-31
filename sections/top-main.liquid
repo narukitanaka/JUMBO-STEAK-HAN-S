@@ -1,0 +1,263 @@
+<div class="mv">
+  <div class="mv-swiper">
+    <div class="swiper-wrapper">
+
+      {% for block in section.blocks %}
+        {% if block.type == 'banner-top' %}
+          <div class="swiper-slide img-box obj-fit">
+            <a href="{{ block.settings.link_banner }}">
+              <picture>
+                <source srcset="{{ block.settings.image_banner_sp | img_url: 'master' }}" media="(max-width: 769px)">
+                <img src="{{ block.settings.image_banner_pc | img_url: 'master' }}" alt="">
+              </picture>
+            </a>
+          </div><!-- /.swiper-slide-->
+        {% endif %}
+      {% endfor %}
+
+    </div><!-- /.swiper-wrapper -->
+    <!-- ページネーション -->
+    <div class="swiper-pagination"></div>
+    <!-- 前後の矢印 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div><!-- /.mv-swiper -->
+  <div class="ashirai img-box"><img src="images/ashirai_cardboard01.png" alt=""></div>
+</div><!-- /.mv -->
+
+<section class="p-top_wrap01">
+  <div class="head-ttl">
+    <div class="img-box"><img src="images/icon-king.svg" alt=""></div>
+    <p class="sub-ttl anime-ttl01">RANKING</p>
+    <h2 class="fadeIn">オンラインストア 人気ランキング</h2>
+  </div>
+
+  <div class="ranking-swiper">
+    <div class="swiper-wrapper">
+
+      {% for product in collections.all.products limit: 10 %}
+        <div class="item-card swiper-slide">
+          <a href="{{ product.url }}" class="h-scale">
+            <div class="img-box">
+              <img src="{{ product.featured_image.src | img_url: 'master' }}" alt="">
+            </div>
+            <p class="cate">
+              {% for collection in product.collections %}
+                {% assign excluded_collections = 'all,tax' | split: ',' %}
+                {% unless excluded_collections contains collection.handle %}
+                  {{ collection.title }}
+                {% endunless %}
+              {% endfor %}
+            </p>
+            <p class="name">{{ product.title }}</p>
+            <p class="price">{{ product.price | money }}(税込)</p>
+          </a>
+        </div><!-- /.item-card -->
+      {% endfor %}
+
+
+    </div><!-- /.swiper-wrapper -->
+  </div><!-- /.ranking-swiper -->
+
+  <div class="btn-wrap">
+    <a href="/collections/all/" class="btn01">VIEW ALL</a>
+  </div>
+</section><!-- /.p-top_wrap01 -->
+
+<section class="p-top_wrap02">
+  <div class="inner flex">
+
+    <div class="head-ttl">
+      <p class="sub-ttl anime-ttl01">HOW TO</p>
+      <h2 class="fadeIn">お肉の美味しい焼き方</h2>
+    </div>
+
+    <div class="block flex">
+      <div class="left fade_triger">
+        <div class="img-box anime-fade"><img src="images/top-howto_img01.jpg" alt=""></div>
+        <div class="img-box anime-fade"><img src="images/top-howto_img02.jpg" alt=""></div>
+        <div class="img-box anime-fade"><img src="images/top-howto_img03.jpg" alt=""></div>
+      </div><!-- /.left -->
+      <div class="right">
+        <p>
+          ステーキの焼き方は難しい？<br>
+          そんなことはありません。沖縄のステーキのプロが教える、美味しい焼き方をご紹介！<br>
+          ご家庭で美味しいステーキが食べられる！
+        </p>
+        <div class="btn-wrap">
+          <a href="/pages/howto/" class="btn01">VIEW DETAIL</a>
+        </div>
+      </div><!-- /.right -->
+    </div>
+
+  </div><!-- /.inner -->
+</section><!-- /.p-top_wrap02 -->
+
+<section class="p-top_wrap03">
+  <div class="inner">
+    <div class="head-ttl">
+      <p class="sub-ttl anime-ttl01">CATEGORY</p>
+      <h2 class="fadeIn">商品カテゴリ</h2>
+    </div>
+  </div><!-- /.inner -->
+
+  <div class="tab">
+    <ul class="tab_menu inner">
+      <li class="tab_menu-item is-active" data-tab="01">用途</li>
+      <li class="tab_menu-item" data-tab="02">予算</li>
+    </ul>
+
+    <div class="tab_panel">
+
+      <div class="tab_panel-box box01 is-show inner" data-panel="01">
+        <div class="cate flex">
+          <div class="box h-scale">
+            <a href="/collection/gift/">
+              <div class="img-box"><img src="images/dummy-item01.jpg" alt=""></div><!-- /.img-box -->
+              <p>ギフト</p>
+            </a>
+          </div>
+
+          <div class="box h-scale">
+            <a href="/collection/backorder/">
+              <div class="img-box"><img src="images/dummy-item01.jpg" alt=""></div><!-- /.img-box -->
+              <p>お取り寄せ（自宅用）</p>
+            </a>
+          </div>
+
+          <div class="box h-scale">
+            <a href="/collection/trial/">
+              <div class="img-box"><img src="images/dummy-item01.jpg" alt=""></div><!-- /.img-box -->
+              <p>お試し</p>
+            </a>
+          </div><!-- /.box -->
+        </div><!-- /.cate -->
+      </div><!-- /.tab_panel-box box01 -->
+
+      <div class="tab_panel-box box02 inner" data-panel="02">
+        <div class="cate flex">
+          <div class="box h-scale">
+            <a href="item-list.html">
+              <div class="img-box"><img src="images/dummy-item01.jpg" alt=""></div><!-- /.img-box -->
+              <p>0~5,000円</p>
+            </a>
+          </div>
+
+          <div class="box h-scale">
+            <a href="item-list.html">
+              <div class="img-box"><img src="images/dummy-item01.jpg" alt=""></div><!-- /.img-box -->
+              <p>0~5,000円</p>
+            </a>
+          </div>
+
+          <div class="box h-scale">
+            <a href="item-list.html">
+              <div class="img-box"><img src="images/dummy-item01.jpg" alt=""></div><!-- /.img-box -->
+              <p>0~5,000円</p>
+            </a>
+          </div><!-- /.box -->
+
+        </div><!-- /.cate -->
+      </div><!-- /.tab_panel-box box02 -->
+
+    </div><!-- /.tab_panel -->
+  </div><!-- /.tab -->
+
+  <div class="btn-wrap">
+    <a href="/collections/all/" class="btn01">VIEW DETAIL</a>
+  </div>
+
+</section><!-- /.p-top_wrap03 -->
+
+<section class="p-top_wrap04">
+  <div class="inner">
+    <div class="head-ttl">
+      <p class="sub-ttl anime-ttl01">ABOUT STEAK HAN’S</p>
+      <h2 class="fadeIn">ステーキHAN’Sのこだわり</h2>
+    </div>
+    <p class="fadeIn">
+      ステーキ激戦区沖縄で、長年県内外に愛されてきたステーキHAN’S。<br>
+      肉へのこだわりとステーキにかける想い。
+    </p>
+    <div class="btn-wrap fadeIn">
+      <a href="/pages/about/" class="btn01">VIEW DETAIL</a>
+    </div>
+  </div>
+</section><!-- /.p-top_wrap04 -->
+
+<section class="common_wrap-faq">
+  <div class="inner">
+    <div class="head-ttl">
+      <p class="sub-ttl anime-ttl01">FAQ</p>
+      <h2 class="fadeIn">よくあるご質問</h2>
+    </div><!-- /.head-ttl -->
+    <div class="flex">
+      <div class="box">
+        <a href="/pages/faq#order">
+          <img src="images/icon-order.svg" alt="">
+          <p>注文・支払いについて</p>
+        </a>
+      </div><!-- /.box -->
+      <div class="box">
+        <a href="/pages/faq#shipping">
+          <img src="images/icon-shipping.svg" alt="">
+          <p>配送・送料について</p>
+        </a>
+      </div><!-- /.box -->
+      <div class="box">
+        <a href="/pages/faq#return">
+          <img src="images/icon-return.svg" alt="">
+          <p>返品・交換について</p>
+        </a>
+      </div><!-- /.box -->
+    </div><!-- /.flex -->
+  </div><!-- /.inner -->
+</section><!-- /.common_wrap-faq -->
+
+<div class="sec-visual-swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide img-box obj-fit"><img src="images/slider_img01.jpg" alt=""></div>
+    <div class="swiper-slide img-box obj-fit"><img src="images/slider_img02.jpg" alt=""></div>
+    <div class="swiper-slide img-box obj-fit"><img src="images/slider_img03.jpg" alt=""></div>
+    <div class="swiper-slide img-box obj-fit"><img src="images/slider_img04.jpg" alt=""></div>
+    <div class="swiper-slide img-box obj-fit"><img src="images/slider_img01.jpg" alt=""></div>
+    <div class="swiper-slide img-box obj-fit"><img src="images/slider_img02.jpg" alt=""></div>
+    <div class="swiper-slide img-box obj-fit"><img src="images/slider_img03.jpg" alt=""></div>
+    <div class="swiper-slide img-box obj-fit"><img src="images/slider_img04.jpg" alt=""></div>
+  </div>
+</div><!-- /.sec-visual-swiper -->
+
+
+{% schema %}
+  {
+    "name": "top-main",
+    "presets": [
+      {
+        "name": "top-main"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "banner-top",
+        "name": "バナー",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image_banner_pc",
+            "label": "PC画像"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_banner_sp",
+            "label": "SP画像"
+          },
+          {
+            "type": "url",
+            "id": "link_banner",
+            "label": "リンク"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
