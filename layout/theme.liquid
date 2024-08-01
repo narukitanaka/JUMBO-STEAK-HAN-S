@@ -356,6 +356,11 @@
         {% unless template == 'index' %}
           <div class="main_bg img-box obj-fit"><img src="https://cdn.shopify.com/s/files/1/0887/4564/0257/files/bg_main.jpg" alt=""></div>
         {% endunless %}
+        {% if template == 'page.about' %}
+          <div class="video-cover">
+            <video id="screen" src="https://cdn.shopify.com/videos/c/o/v/67d9c88005724f3eb62b1d72f3863da8.mp4" autoplay muted playsinline loop></video>
+          </div>
+        {% endif %}
         {{ content_for_layout }}
       </main>
   
