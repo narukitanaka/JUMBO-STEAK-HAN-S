@@ -2171,6 +2171,36 @@ top
   padding-left: 3rem;
 }
 
+/*************************************************
+  レビューアプリ
+*************************************************/
+#judgeme_product_reviews .jdgm-rev-widg {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+  z-index: 10;
+}
+#judgeme_product_reviews .jdgm-form {
+  padding: 4rem 2rem;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#judgeme_product_reviews .jdgm-form .jdgm-form__reviewer-name-format-container {
+  display: none;
+}
+
+.jdgm-form .jdgm-form__fieldset label[for] {
+  font-size: 16px;
+}
+
+.jdgm-form input[type=text], .jdgm-form input[type=email], .jdgm-form input[type=url], .jdgm-form textarea {
+  font-size: 14px;
+}
+
+.jdgm-form__fieldset-actions {
+  display: flex;
+  justify-content: center;
+}
+
 /**
  * Swiper 8.1.6
  * Most modern mobile touch slider and framework with hardware accelerated transitions
