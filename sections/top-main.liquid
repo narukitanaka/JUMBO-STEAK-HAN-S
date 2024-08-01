@@ -44,7 +44,7 @@
             <p class="cate">
               {% for collection in product.collections %}
                 {% assign excluded_collections = 'all,tax' | split: ',' %}
-                {% unless excluded_collections contains collection.handle %}
+                {% unless excluded_collections contains collection.handle or collection.handle contains 'price' %}
                   {{ collection.title }}
                 {% endunless %}
               {% endfor %}
@@ -112,21 +112,21 @@
       <div class="tab_panel-box box01 is-show inner" data-panel="01">
         <div class="cate flex">
           <div class="box h-scale">
-            <a href="/collection/gift/">
+            <a href="/collections/gift/">
               <div class="img-box"><img src="https://cdn.shopify.com/s/files/1/0887/4564/0257/files/dummy-item01.jpg" alt=""></div><!-- /.img-box -->
               <p>ギフト</p>
             </a>
           </div>
 
           <div class="box h-scale">
-            <a href="/collection/backorder/">
+            <a href="/collections/backorder/">
               <div class="img-box"><img src="https://cdn.shopify.com/s/files/1/0887/4564/0257/files/dummy-item01.jpg" alt=""></div><!-- /.img-box -->
               <p>お取り寄せ（自宅用）</p>
             </a>
           </div>
 
           <div class="box h-scale">
-            <a href="/collection/trial/">
+            <a href="/collections/trial/">
               <div class="img-box"><img src="https://cdn.shopify.com/s/files/1/0887/4564/0257/files/dummy-item01.jpg" alt=""></div><!-- /.img-box -->
               <p>お試し</p>
             </a>

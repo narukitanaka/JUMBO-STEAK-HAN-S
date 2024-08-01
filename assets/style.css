@@ -1136,7 +1136,7 @@ top
 　商品一覧
 *************************************************/
 .p-itemlist_wrap01 {
-  background: url(https://cdn.shopify.com/s/files/1/0887/4564/0257/files/ashirai_cardboard08.png) no-repeat top/contain;
+  background: url(https://cdn.shopify.com/s/files/1/0887/4564/0257/files/ashirai_cardboard08.png) no-repeat top/cover;
   margin-top: -15.2777777778vw;
   padding: 12.5vw 0 27.0833333333vw;
   z-index: 1;
