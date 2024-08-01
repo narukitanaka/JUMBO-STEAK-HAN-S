@@ -1,5 +1,3 @@
-<div class="main_bg img-box obj-fit"><img src="https://cdn.shopify.com/s/files/1/0887/4564/0257/files/bg_main.jpg" alt=""></div>
-
 <div class="under-mv">
   <div class="img-box obj-fit">
     <picture>
@@ -60,7 +58,7 @@
       <aside>
         <div class="catelist">
           <div class="box">
-            <p class="allitems"><a href="/collections/all/">全ての商品</a></p>
+            <p class="allitems"><a {% if request.path contains 'all' %}class="active"{% endif %} href="/collections/all/">全ての商品</a></p>
             <div class="sp-flex">
               <nav class="nav01">
                 <p>

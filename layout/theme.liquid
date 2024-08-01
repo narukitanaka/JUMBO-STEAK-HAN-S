@@ -341,7 +341,7 @@
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
-    <div class="wrap-hidden">
+    <div class="wrap-hidden {% if template == 'collection' or template == 'page.howto' %}visible{% endif %}">
       {% comment %} <a class="skip-to-content-link button visually-hidden" href="#MainContent">
         {{ 'accessibility.skip_to_text' | t }}
       </a> {% endcomment %}
@@ -353,6 +353,9 @@
       {% sections 'header-group' %}
   
       <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+        {% unless template == 'index' %}
+          <div class="main_bg img-box obj-fit"><img src="https://cdn.shopify.com/s/files/1/0887/4564/0257/files/bg_main.jpg" alt=""></div>
+        {% endunless %}
         {{ content_for_layout }}
       </main>
   

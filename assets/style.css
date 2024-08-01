@@ -1146,7 +1146,7 @@ top
   justify-content: space-between;
 }
 .p-itemlist_wrap01 .contents .list-contents {
-  max-width: 93.8rem;
+  width: 93.8rem;
   padding-top: 11.6rem;
 }
 .p-itemlist_wrap01 .contents .list-contents .itemlist {
