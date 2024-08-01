@@ -1500,10 +1500,14 @@ top
     border-bottom: 3px dotted #F08301;
   }
 }
+.p-itemdetail.detail-top {
+  padding-bottom: 4rem;
+}
 .p-itemdetail.detail-bottom {
   position: relative;
   padding: 18rem 0 17.3611111111vw;
   background-color: #000;
+  margin-top: 10rem;
 }
 @media screen and (max-width: 768px) {
   .p-itemdetail.detail-bottom {

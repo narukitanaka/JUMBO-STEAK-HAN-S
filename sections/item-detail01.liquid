@@ -8,9 +8,20 @@
             <a href="{{ routes.root_url }}"><img src="https://cdn.shopify.com/s/files/1/0887/4564/0257/files/icon-home.svg" alt=""></a>
           </li>
           <li>
-            <a href="item-list.html">カテゴリ名</a>
+            {% assign excluded_collections = 'all,tax' | split: ',' %}
+            {% assign collection_links = '' %}
+            {% for collection in product.collections %}
+              {% unless excluded_collections contains collection.handle %}
+                {% capture link %}<a href="{{ collection.url }}">{{ collection.title }}</a>{% endcapture %}
+                {% if collection_links != '' %}
+                  {% assign collection_links = collection_links | append: ' , ' %}
+                {% endif %}
+                {% assign collection_links = collection_links | append: link %}
+              {% endunless %}
+            {% endfor %}
+            {{ collection_links | raw }}
           </li>
-          <li>商品名</li>
+          <li>{{ product.title }}</li>
         </ol>
       </nav>
     </div><!-- /.breadcrumb -->
@@ -20,13 +31,17 @@
       <div class="img-content">
         <div class="img-wrapper">
 
-          {% for image in product.images %}
-            <div class="swiper-slide">
-              <div class="img-wrap">
-                <img src="{{ image.src | img_url: 'master' }}" alt="">
-              </div>
-            </div>
-          {%- endfor -%}
+          <div class="swiper-item">
+            <div class="swiper-wrapper">
+              {% for image in product.images %}
+                <div class="swiper-slide">
+                  <div class="img-wrap">
+                    <img src="{{ image.src | img_url: 'master' }}" alt="">
+                  </div>
+                </div>
+              {%- endfor -%}
+            </div><!-- /.swiper-wrapper -->
+          </div><!-- /.swiper03 -->
 
           <div class="thumb-list">
             {% for image in product.images %}
