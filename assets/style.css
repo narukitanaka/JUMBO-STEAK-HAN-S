@@ -497,6 +497,7 @@ footer .fotter-top .column05 p {
 }
 footer .fotter-bottom {
   background-color: #000;
+  padding-bottom: 2rem;
 }
 footer .fotter-bottom p {
   text-align: center;
@@ -2265,6 +2266,72 @@ top
 .jdgm-form__fieldset-actions {
   display: flex;
   justify-content: center;
+}
+
+/*************************************************
+  検索結果
+*************************************************/
+.title-wrapper-with-link h1, .title-wrapper-with-link p, .title-wrapper-with-link a {
+  color: #fff;
+}
+
+.template-search {
+  text-align: center;
+}
+.template-search h1, .template-search h2, .template-search h3, .template-search p, .template-search a, .template-search div {
+  color: #fff;
+}
+
+/*************************************************
+カート
+*************************************************/
+.custom-cart h1, .custom-cart h2, .custom-cart div, .custom-cart p, .custom-cart a, .custom-cart th, .custom-cart td, .custom-cart span {
+  color: #fff;
+}
+.custom-cart .button {
+  background-color: #F08301;
+  font-weight: 500;
+}
+.custom-cart .button--tertiary {
+  background-color: transparent;
+}
+
+.cart-items th {
+  font-size: 14px;
+  border-bottom: 1px solid #fff !important;
+}
+@media screen and (max-width: 768px) {
+  .cart-items th {
+    border-bottom: none !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cart-items thead tr {
+    border-bottom: 1px solid #fff !important;
+  }
+}
+
+.cart__items {
+  border-bottom: 1px solid #fff !important;
+}
+
+/*************************************************
+マイページ
+*************************************************/
+.customer h1, .customer h2, .customer p, .customer a {
+  color: #fff;
+}
+.customer h1 {
+  font-weight: 500;
+}
+.customer button {
+  background-color: #F08301;
+  font-weight: 500;
+}
+
+.addresses button {
+  display: block;
+  margin: 2rem auto 1rem !important;
 }
 
 /**
