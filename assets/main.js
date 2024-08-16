@@ -1,38 +1,39 @@
 ///////////////////////////////////////////
 //ハンバーガーメニュー
 //////////////////////////////////////////
-// $('.hambager').on('click', function () {
-//   navOpen();
-// });
-// let navFlg = false;
-// function navOpen() {
-//   if (!navFlg) {
-//     $('.hamberger-wrap').addClass('is-ham-open');
-//     $('.mega-menu').addClass('is-megamenu-open');
-//     $('.header-inner').addClass('is-megamenu-icon');
-//     $('#header').addClass('is-megamenu-headfix');
-//     $('.ham-txt').text('閉じる');
-//     navFlg = true;
-//   } else {
-//     $('.hamberger-wrap').removeClass('is-ham-open');
-//     $('.mega-menu').removeClass('is-megamenu-open');
-//     $('.header-inner').removeClass('is-megamenu-icon');
-//     $('#header').removeClass('is-megamenu-headfix');
-//     $('.ham-txt').text('メニュー');
-//     navFlg = false;
-//   }
-// }
+$('.hambager').on('click', function () {
+  navOpen();
+});
+let navFlg = false;
+function navOpen() {
+  if (!navFlg) {
+    $('.hamberger-wrap').addClass('is-ham-open');
+    $('.mega-menu').addClass('is-megamenu-open');
+    $('.header-inner').addClass('is-megamenu-icon');
+    $('#header').addClass('is-megamenu-headfix');
+    $('.ham-txt').text('CLOSE');
+    navFlg = true;
+  } else {
+    $('.hamberger-wrap').removeClass('is-ham-open');
+    $('.mega-menu').removeClass('is-megamenu-open');
+    $('.header-inner').removeClass('is-megamenu-icon');
+    $('#header').removeClass('is-megamenu-headfix');
+    $('.ham-txt').text('MENU');
+    navFlg = false;
+  }
+}
 
 
+/////////////////////////////////////////
 //ハンバーガーメニュー アコーディオン
-///////////////////////////////////////////
-// $(document).ready(function() {
-//   $(".little-nav").hide();
-//   $(".nav01 .parent").on('click', function() {
-//     $(this).toggleClass('active');
-//     $(this).next('.little-nav').slideToggle(300);
-//   });
-// });
+/////////////////////////////////////////
+$(document).ready(function() {
+  $(".little-nav").hide();
+  $(".nav01 .parent").on('click', function() {
+    $(this).toggleClass('active');
+    $(this).next('.little-nav').slideToggle(300);
+  });
+});
 
 
 ///////////////////////////////////////////
@@ -122,14 +123,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const swiper = new Swiper(".mv-swiper", {
     loop: true, // ループ
     speed: 2000, // 少しゆっくり(デフォルトは300)
-    slidesPerView: 1.15, // 一度に表示する枚数
+    slidesPerView: 1.1, // 一度に表示する枚数
     centeredSlides: true, // アクティブなスライドを中央にする
-    // breakpoints: {
-    //   769: {
-    //     slidesPerView: 1.5,
-    //     spaceBetween: 70,
-    //   }
-    // },
+    breakpoints: {
+      769: {
+        slidesPerView: 1.15,
+      }
+    },
     autoplay: {
       // 自動再生
       delay: 4000, // 1秒後に次のスライド
@@ -149,21 +149,54 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
   //TOP　商品一覧スライダー
-  const itemlistswiper = new Swiper('.ranking-swiper', {
-    loop: true,
-    slidesPerView: 4,
-    spaceBetween: 50,
-    mousewheel: {
-      forceToAxis: true,
-      sensitivity: 3
-    },
+  var rankingswiper; 
+  $(window).on('load resize', function(){
+      var w = $(window).width();
+      if (w <= 1100) {
+        if (rankingswiper) {
+          return;
+        } else {
+          rankingswiper = new Swiper('.ranking-swiper', {
+            autoplay: {
+              delay: 3000,
+            },
+            scrollbar: {
+              el: '.swiper-scrollbar', //要素指定
+            },
+            mousewheel: {
+              forceToAxis: true,
+              sensitivity: 3
+            },
+            breakpoints: {
+              360: {
+                slidesPerView: 2.4,
+                spaceBetween: 15,
+              },
+              769: {
+                slidesPerView: 4,
+                spaceBetween: 50,
+              }
+            },
+          });
+        }
+      } else {
+        const itemlistswiper = new Swiper('.ranking-swiper', {
+          loop: true,
+          slidesPerView: 4,
+          spaceBetween: 50,
+          mousewheel: {
+            forceToAxis: true,
+            sensitivity: 3
+          },
+        });
+      } 
   });
 
 
   //TOP　無限スライダー
   const visualswiper = new Swiper(".sec-visual-swiper", {
     loop: true, // ループ有効
-    slidesPerView: 4, // 一度に表示する枚数
+    slidesPerView: 2, // 一度に表示する枚数
     speed: 7000, // ループの時間
     allowTouchMove: false, // スワイプ無効
     autoplay: {
@@ -171,7 +204,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     },
     breakpoints: {
       769: {
-        slidesPerView: 5.5,
+        slidesPerView: 4,
       }
     },
   });

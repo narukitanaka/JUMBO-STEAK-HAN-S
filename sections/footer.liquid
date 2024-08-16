@@ -6,8 +6,8 @@
           <div class="logo img-box">
             <a href="{{ routes.root_url }}"><img src="https://cdn.shopify.com/s/files/1/0887/4564/0257/files/logo01.svg" alt=""></a>
           </div>
-          <p>沖縄県那覇市若狭2丁目14番12号</p>
-          <div class="sns">
+          <p class="u-pc">沖縄県那覇市若狭2丁目14番12号</p>
+          <div class="sns u-pc">
             <a href="#" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0887/4564/0257/files/icon-insta.png" alt=""></a>
             <a href="#" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0887/4564/0257/files/icon-line.svg" alt=""></a>
           </div>
@@ -15,11 +15,12 @@
 
         <div class="column column02">
           <nav>
-            <ul>
+            <ul class="nav01">
               <li><a href="{{ routes.root_url }}">TOP</a></li>
-              <li class="parent">商品一覧</li>
-              <li class="child"><a href="item-list.html">・用途から選ぶ</a></li>
-              <li class="child ch02"><a href="item-list.html">・予算から選ぶ</a></li>
+              <li class="parent u-pc">商品一覧</li>
+              <li class="parent u-sp"><a href="/collections/all/">商品一覧</a></li>
+              <li class="child u-pc"><a href="item-list.html">・用途から選ぶ</a></li>
+              <li class="child ch02 u-pc"><a href="item-list.html">・予算から選ぶ</a></li>
               <li><a href="/pages/howto/">お肉の美味しい焼き方</a></li>
               <li><a href="/pages/about/">ステーキHAN’Sについて</a></li>
             </ul>
@@ -30,14 +31,14 @@
           <nav>
             <ul>
               <li><a href="/pages/faq/">よくあるご質問</a></li>
-              <li><a href="/pages/company/">会社概要</a></li>
-              <li><a href="/pages/term/">特定商取引法に基づく表記</a></li>
-              <li><a href="/pages/policy/">プライバシーポリシー</a></li>
+              <li class="u-pc"><a href="/pages/company/">会社概要</a></li>
+              <li class="u-pc"><a href="/pages/term/">特定商取引法に基づく表記</a></li>
+              <li class="u-pc"><a href="/pages/policy/">プライバシーポリシー</a></li>
             </ul>
           </nav>
         </div><!-- /.column-->
 
-        <div class="column column04">
+        <div class="column column04 u-pc">
           <nav>
             <ul>
               <li>
@@ -78,9 +79,37 @@
             </a>
           </div><!-- /.footer_tel-btn -->
           <p>
-            【営業時間】<br>
+            【営業時間】<br class="u-pc">
             平日：AM9:00~​PM7:00
           </p>
+        </div><!-- /.column-->
+
+        <div class="column column06 u-sp">
+          <div class="sp-footer_log-cart">
+            <li>
+              <a href="/account/">
+                <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.5 11C14.6769 11 17.25 8.53875 17.25 5.5C17.25 2.46125 14.6769 0 11.5 0C8.32312 0 5.75 2.46125 5.75 5.5C5.75 8.53875 8.32312 11 11.5 11ZM11.5 13.75C7.66187 13.75 0 15.5925 0 19.25V20.625C0 21.3813 0.646875 22 1.4375 22H21.5625C22.3531 22 23 21.3813 23 20.625V19.25C23 15.5925 15.3381 13.75 11.5 13.75Z" fill="white"/>
+                </svg>
+                ログイン
+              </a>
+            </li>
+            <li>
+              <a href="/cart/">
+              <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.125 18.25C18.7217 18.25 19.294 18.4871 19.716 18.909C20.1379 19.331 20.375 19.9033 20.375 20.5C20.375 21.0967 20.1379 21.669 19.716 22.091C19.294 22.5129 18.7217 22.75 18.125 22.75C17.5283 22.75 16.956 22.5129 16.534 22.091C16.1121 21.669 15.875 21.0967 15.875 20.5C15.875 19.2512 16.8762 18.25 18.125 18.25ZM0.125 0.25H3.80375L4.86125 2.5H21.5C21.7984 2.5 22.0845 2.61853 22.2955 2.82951C22.5065 3.04048 22.625 3.32663 22.625 3.625C22.625 3.81625 22.5687 4.0075 22.49 4.1875L18.4625 11.4663C18.08 12.1525 17.3375 12.625 16.4938 12.625H8.1125L7.1 14.4588L7.06625 14.5938C7.06625 14.6683 7.09588 14.7399 7.14863 14.7926C7.20137 14.8454 7.27291 14.875 7.3475 14.875H20.375V17.125H6.875C6.27826 17.125 5.70597 16.8879 5.28401 16.466C4.86205 16.044 4.625 15.4717 4.625 14.875C4.625 14.4813 4.72625 14.11 4.895 13.795L6.425 11.0388L2.375 2.5H0.125V0.25ZM6.875 18.25C7.47174 18.25 8.04403 18.4871 8.46599 18.909C8.88795 19.331 9.125 19.9033 9.125 20.5C9.125 21.0967 8.88795 21.669 8.46599 22.091C8.04403 22.5129 7.47174 22.75 6.875 22.75C6.27826 22.75 5.70597 22.5129 5.28401 22.091C4.86205 21.669 4.625 21.0967 4.625 20.5C4.625 19.2512 5.62625 18.25 6.875 18.25ZM17 10.375L20.1275 4.75H5.9075L8.5625 10.375H17Z" fill="white"/>
+              </svg> 
+                カート
+              </a>
+            </li>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="/pages/company/">会社概要</a></li>
+              <li><a href="/pages/term/">特定商取引法に基づく表記</a></li>
+              <li><a href="/pages/policy/">プライバシーポリシー</a></li>
+            </ul>
+          </nav>
         </div><!-- /.column-->
 
     </div><!-- /.inner-->
