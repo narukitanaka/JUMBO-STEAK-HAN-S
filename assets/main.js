@@ -56,61 +56,6 @@ function showElement(entries) {
   });
 }
 
-///////////////////////////////////////////
-//TOP タブ
-///////////////////////////////////////////
-const tabMenus = document.querySelectorAll('.tab_menu-item');
-console.log(tabMenus);
-
-tabMenus.forEach((tabMenu) => {
-  tabMenu.addEventListener('click', tabSwitch);
-})
-
-function tabSwitch(e) {
-  // クリックされた要素のデータ属性を取得
-  const tabTargetData = e.currentTarget.dataset.tab;
-  // クリックされた要素の親要素と、その子要素を取得
-  const tabList = e.currentTarget.closest('.tab_menu');
-  console.log(tabList);
-  const tabItems = tabList.querySelectorAll('.tab_menu-item');
-  console.log(tabItems);
-  // クリックされた要素の親要素の兄弟要素の子要素を取得
-  const tabPanelItems = tabList.
-  nextElementSibling.querySelectorAll('.tab_panel-box');
-  console.log(tabPanelItems);
-
-  // クリックされたtabの同階層のmenuとpanelのクラスを削除
-  tabItems.forEach((tabItem) => {
-    tabItem.classList.remove('is-active');
-  })
-  tabPanelItems.forEach((tabPanelItem) => {
-    tabPanelItem.classList.remove('is-show');
-  })
-
-  // クリックされたmenu要素にis-activeクラスを付加
-  e.currentTarget.classList.add('is-active');
-  // クリックしたmenuのデータ属性と等しい値を持つパネルにis-showクラスを付加
-  tabPanelItems.forEach((tabPanelItem) => {
-    if (tabPanelItem.dataset.panel ===  tabTargetData) {
-      tabPanelItem.classList.add('is-show');
-    }
-  })
-
-}
-
-
-///////////////////////////////////////////
-//FAQ アコーディオン
-///////////////////////////////////////////
-$(".qa-list dd").hide();
-$(".qa-list dl").on("click", function(e){
-    $('dd',this).slideToggle('fast');
-    if($(this).hasClass('open')){
-        $(this).removeClass('open');
-    }else{
-        $(this).addClass('open');
-    }
-});
 
 
 
@@ -249,7 +194,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 
-
+////////////////////////////////////////////////////////////////////////////////////////
+// テキストを1文字ずつspanで囲む
+///////////////////////////////////////////////////////////////////////////////////////
 (function () {
   const jsText = document.querySelectorAll('.anime-ttl01');
   jsText.forEach(target => {
@@ -342,3 +289,67 @@ function clearActiveStep(index) {
     gsap.to(activeStep, {opacity: 0.5, duration: 0.3});
   }
 }
+
+
+
+
+///////////////////////////////////////////
+//TOP タブ
+///////////////////////////////////////////
+const tabMenus = document.querySelectorAll('.tab_menu-item');
+console.log(tabMenus);
+
+tabMenus.forEach((tabMenu) => {
+  tabMenu.addEventListener('click', tabSwitch);
+})
+
+function tabSwitch(e) {
+  // クリックされた要素のデータ属性を取得
+  const tabTargetData = e.currentTarget.dataset.tab;
+  // クリックされた要素の親要素と、その子要素を取得
+  const tabList = e.currentTarget.closest('.tab_menu');
+  console.log(tabList);
+  const tabItems = tabList.querySelectorAll('.tab_menu-item');
+  console.log(tabItems);
+  // クリックされた要素の親要素の兄弟要素の子要素を取得
+  const tabPanelItems = tabList.
+  nextElementSibling.querySelectorAll('.tab_panel-box');
+  console.log(tabPanelItems);
+
+  // クリックされたtabの同階層のmenuとpanelのクラスを削除
+  tabItems.forEach((tabItem) => {
+    tabItem.classList.remove('is-active');
+  })
+  tabPanelItems.forEach((tabPanelItem) => {
+    tabPanelItem.classList.remove('is-show');
+  })
+
+  // クリックされたmenu要素にis-activeクラスを付加
+  e.currentTarget.classList.add('is-active');
+  // クリックしたmenuのデータ属性と等しい値を持つパネルにis-showクラスを付加
+  tabPanelItems.forEach((tabPanelItem) => {
+    if (tabPanelItem.dataset.panel ===  tabTargetData) {
+      tabPanelItem.classList.add('is-show');
+    }
+  })
+
+}
+
+
+///////////////////////////////////////////
+//FAQ アコーディオン
+///////////////////////////////////////////
+$(".qa-list dd").hide();
+$(".qa-list dl").on("click", function(e){
+    $('dd',this).slideToggle('fast');
+    if($(this).hasClass('open')){
+        $(this).removeClass('open');
+    }else{
+        $(this).addClass('open');
+    }
+});
+
+
+
+
+
