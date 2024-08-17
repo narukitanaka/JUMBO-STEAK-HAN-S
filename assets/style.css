@@ -3014,6 +3014,11 @@ top
   padding: 12.5vw 0 17.3611111111vw;
   z-index: 1;
 }
+@media screen and (max-width: 768px) {
+  .p-contact_wrap01 {
+    padding: 15.3846153846vw 0 30.7692307692vw;
+  }
+}
 .p-contact_wrap01 .message {
   color: #fff;
   text-align: center;
@@ -3110,7 +3115,7 @@ top
 }
 @media screen and (max-width: 768px) {
   .p-contact_wrap01 .form_wrap {
-    padding: 4rem 2rem;
+    padding: 2rem;
     margin-bottom: 2rem;
   }
 }
@@ -3203,6 +3208,23 @@ top
   font-size: 2.4rem;
   font-weight: 600;
   padding-left: 3rem;
+}
+@media screen and (max-width: 768px) {
+  .p-contact_wrap01 .form_wrap form .btn-wrap .btn01 {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .p-contact_wrap01 .form_wrap form .btn-wrap .btn01::before {
+    width: 15rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .p-contact_wrap01 .form_wrap form .btn-wrap .btn01::after {
+    bottom: -1rem;
+    right: 1rem;
+    width: 3.5rem;
+  }
 }
 
 /*************************************************
