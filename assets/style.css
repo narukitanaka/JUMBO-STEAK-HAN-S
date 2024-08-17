@@ -62,7 +62,7 @@ body {
 @media screen and (max-width: 768px) {
   .inner {
     width: 90%;
-    max-width: 750px;
+    max-width: 600px;
   }
 }
 
@@ -393,7 +393,7 @@ header {
 }
 @media screen and (max-width: 768px) {
   header {
-    padding: 1.2rem 5.1282051282vw 4.5rem;
+    padding: 3.0769230769vw 5.1282051282vw 4.5rem;
   }
 }
 header .header-inner {
@@ -633,7 +633,7 @@ header .nav02 ul .hamberger-wrap {
 @media screen and (max-width: 768px) {
   .mega-menu {
     width: 100%;
-    padding-top: 12rem;
+    padding-top: min(30.7692307692vw, 15rem);
     padding-bottom: 4rem;
   }
 }
@@ -642,6 +642,7 @@ header .nav02 ul .hamberger-wrap {
 }
 .mega-menu .mega-menu_inner {
   width: 80%;
+  max-width: 50rem;
   margin: 0 auto;
 }
 @media screen and (max-width: 768px) {
@@ -659,6 +660,7 @@ header .nav02 ul .hamberger-wrap {
   }
   .mega-menu .column02 .footer_contact-btn {
     width: 100%;
+    max-width: 30rem;
     aspect-ratio: 1/0.26;
     margin: 0 auto 1.2rem;
   }
@@ -1287,12 +1289,18 @@ top
 }
 @media screen and (max-width: 768px) {
   .p-top_wrap04 {
-    padding: 59.7435897436vw 0 82.8205128205vw;
+    padding-top: min(57.1794871795vw, 25rem);
+    padding-bottom: min(82.8205128205vw, 34rem);
     background: url(https://cdn.shopify.com/s/files/1/0887/4564/0257/files/ashirai_cardboard04.png) no-repeat top/contain, url(https://cdn.shopify.com/s/files/1/0887/4564/0257/files/ashirai_cardboard06.png) no-repeat bottom/contain, url(https://cdn.shopify.com/s/files/1/0887/4564/0257/files/top-about_bg_sp.png) no-repeat bottom/contain, url(https://cdn.shopify.com/s/files/1/0887/4564/0257/files/top-howto_bg.jpg) no-repeat top/contain;
   }
 }
 .p-top_wrap04 .head-ttl {
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .p-top_wrap04 .head-ttl .sub-ttl {
+    text-align: center;
+  }
 }
 .p-top_wrap04 p {
   max-width: 80rem;
@@ -1301,6 +1309,7 @@ top
 }
 @media screen and (max-width: 768px) {
   .p-top_wrap04 p {
+    max-width: 37rem;
     font-size: 1.3rem;
     text-align: left;
   }
@@ -1429,8 +1438,13 @@ top
 }
 @media screen and (max-width: 768px) {
   .under-mv {
+    aspect-ratio: 1/0.7;
+    padding-top: 9rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .under-mv.p_about, .under-mv.p_policy {
     aspect-ratio: 1/0.9;
-    padding-top: 19.4871794872vw;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1459,7 +1473,10 @@ top
 }
 @media screen and (max-width: 768px) {
   .under-mv .mv-ttl h1 {
+    position: relative;
     font-size: 2rem;
+    font-size: min(5.1282051282vw, 3.2rem);
+    z-index: 2;
   }
 }
 .under-mv .ashirai {
@@ -1484,6 +1501,7 @@ top
 @media screen and (max-width: 768px) {
   .big-ttl {
     font-size: 6.6rem;
+    font-size: min(16.9230769231vw, 10rem);
     line-height: 1;
     background: linear-gradient(180deg, rgb(240, 131, 1) 30%, transparent 95%);
     -webkit-background-clip: text;
@@ -1494,8 +1512,24 @@ top
 .under-common_wrap {
   margin-top: -19.0972222222vw;
 }
+@media screen and (max-width: 768px) {
+  .under-common_wrap {
+    margin-top: -25.641025641vw;
+  }
+}
 .under-common_wrap .block .inner {
   max-width: 86.1111111111vw;
+}
+@media screen and (max-width: 768px) {
+  .under-common_wrap .block .head-ttl {
+    text-align: center;
+    margin-bottom: 5.8rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .under-common_wrap .block .btn-wrap {
+    text-align: center;
+  }
 }
 .under-common_wrap .block .btn-wrap .btn01 {
   line-height: 1.4;
@@ -1505,28 +1539,71 @@ top
   padding: 26.4583333333vw 0 13.3333333333vw;
   background: url(https://cdn.shopify.com/s/files/1/0887/4564/0257/files/under-common_img03.png) no-repeat center/cover;
 }
+@media screen and (max-width: 768px) {
+  .under-common_wrap .block.about {
+    padding: 35.8974358974vw 0 17.9487179487vw;
+  }
+}
+.under-common_wrap .block.about .sub-ttl {
+  font-size: 3.8rem;
+}
+@media screen and (max-width: 768px) {
+  .under-common_wrap .block.about .btn-wrap {
+    text-align: center;
+  }
+}
 .under-common_wrap .block.about .btn-wrap .btn01 {
   width: 21rem;
 }
 .under-common_wrap .block.about .btn-wrap .btn01::before {
   width: 21rem;
 }
+@media screen and (max-width: 768px) {
+  .under-common_wrap .block.about .btn-wrap .btn01::before {
+    width: 23.5rem;
+  }
+}
 .under-common_wrap .block.howto {
   padding: 26.4583333333vw 0 13.3333333333vw;
   background: url(https://cdn.shopify.com/s/files/1/0887/4564/0257/files/under-common_img01.png) no-repeat center/cover;
+}
+@media screen and (max-width: 768px) {
+  .under-common_wrap .block.howto {
+    padding: 35.8974358974vw 0 17.9487179487vw;
+  }
 }
 .under-common_wrap .block.lineup {
   padding: 12.3611111111vw 0 20.8333333333vw;
   background: url(https://cdn.shopify.com/s/files/1/0887/4564/0257/files/under-common_img02.png) no-repeat top/cover;
 }
+@media screen and (max-width: 768px) {
+  .under-common_wrap .block.lineup {
+    padding: 19.7435897436vw 0 35.8974358974vw;
+  }
+}
 .under-common_wrap .block.lineup .inner .head-ttl, .under-common_wrap .block.lineup .inner .btn-wrap {
   max-width: 20.4rem;
+}
+@media screen and (max-width: 768px) {
+  .under-common_wrap .block.lineup .inner .head-ttl, .under-common_wrap .block.lineup .inner .btn-wrap {
+    max-width: none;
+  }
 }
 .under-common_wrap .block.lineup .inner .head-ttl {
   margin: 0 0 4.6rem auto;
 }
+@media screen and (max-width: 768px) {
+  .under-common_wrap .block.lineup .inner .head-ttl {
+    text-align: center;
+  }
+}
 .under-common_wrap .block.lineup .inner .btn-wrap {
   margin: 0 0 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .under-common_wrap .block.lineup .inner .btn-wrap {
+    text-align: center;
+  }
 }
 
 .breadcrumb {
@@ -1644,13 +1721,18 @@ top
   padding: 11.8055555556vw 0 45.1388888889vw;
   z-index: 3;
 }
+@media screen and (max-width: 768px) {
+  .p-about_wrap02 {
+    padding: 43.5897435897vw 0 53.8461538462vw;
+  }
+}
 .p-about_wrap02 .block {
   position: relative;
   margin-bottom: 40rem;
 }
 @media screen and (max-width: 768px) {
   .p-about_wrap02 .block {
-    margin-bottom: 12rem;
+    margin-bottom: 10rem;
   }
 }
 .p-about_wrap02 .block:last-of-type {
@@ -1662,7 +1744,7 @@ top
 }
 @media screen and (max-width: 768px) {
   .p-about_wrap02 .block .ttl-wrap {
-    margin-bottom: 102.5641025641vw;
+    margin-bottom: 74.358974359vw;
   }
 }
 .p-about_wrap02 .block .ttl-wrap .big-ttl {
@@ -1670,7 +1752,8 @@ top
 }
 @media screen and (max-width: 768px) {
   .p-about_wrap02 .block .ttl-wrap .big-ttl {
-    font-size: 6.2rem;
+    white-space: nowrap;
+    font-size: 7rem;
   }
 }
 .p-about_wrap02 .block .flex {
@@ -1685,7 +1768,19 @@ top
   flex-direction: row-reverse;
 }
 @media screen and (max-width: 768px) {
+  .p-about_wrap02 .block .flex.reverce {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .p-about_wrap02 .block .head-ttl {
+    position: relative;
+    z-index: 2;
+  }
+}
+@media screen and (max-width: 768px) {
   .p-about_wrap02 .block .head-ttl p {
+    font-size: 3.2rem;
     text-align: center;
   }
 }
@@ -1694,6 +1789,7 @@ top
 }
 @media screen and (max-width: 768px) {
   .p-about_wrap02 .block .head-ttl h3 {
+    font-size: 1.8rem;
     text-align: center;
   }
 }
@@ -1719,7 +1815,7 @@ top
     width: 78.7179487179vw;
     max-width: 50rem;
     aspect-ratio: 1/1.22;
-    top: 4.5rem;
+    top: 5.5rem;
   }
 }
 .p-about_wrap02 .block .img-box.rotate01 {
@@ -1728,7 +1824,7 @@ top
 }
 @media screen and (max-width: 768px) {
   .p-about_wrap02 .block .img-box.rotate01 {
-    top: 3rem;
+    top: 4rem;
   }
 }
 .p-about_wrap02 .block .img-box.rotate02 {
@@ -1737,11 +1833,21 @@ top
 }
 @media screen and (max-width: 768px) {
   .p-about_wrap02 .block .img-box.rotate02 {
-    top: 6rem;
+    top: 7rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .p-about_wrap02 .block.meat .ttl-wrap .big-ttl {
+    transform: translateX(-5.1282051282vw);
   }
 }
 .p-about_wrap02 .block.steak .ttl-wrap .big-ttl {
   rotate: -5deg;
+}
+@media screen and (max-width: 768px) {
+  .p-about_wrap02 .block.steak .ttl-wrap .big-ttl {
+    transform: translateX(-17.9487179487vw);
+  }
 }
 .p-about_wrap02 .block.steak .img-box {
   position: absolute;
@@ -1751,13 +1857,33 @@ top
   width: 60rem;
   aspect-ratio: 1/1.22;
 }
+@media screen and (max-width: 768px) {
+  .p-about_wrap02 .block.steak .img-box {
+    width: 78.7179487179vw;
+    max-width: 50rem;
+    aspect-ratio: 1/1.22;
+    top: 5.5rem;
+  }
+}
 .p-about_wrap02 .block.steak .img-box.rotate01 {
   rotate: 5deg;
   top: 21rem;
 }
+@media screen and (max-width: 768px) {
+  .p-about_wrap02 .block.steak .img-box.rotate01 {
+    rotate: -5deg;
+    top: 4rem;
+  }
+}
 .p-about_wrap02 .block.steak .img-box.rotate02 {
   rotate: -5deg;
   top: 14rem;
+}
+@media screen and (max-width: 768px) {
+  .p-about_wrap02 .block.steak .img-box.rotate02 {
+    rotate: 5deg;
+    top: 7rem;
+  }
 }
 
 /*************************************************
@@ -1767,7 +1893,12 @@ top
   background: url(https://cdn.shopify.com/s/files/1/0887/4564/0257/files/ashirai_cardboard08.png) no-repeat top/contain, url(https://cdn.shopify.com/s/files/1/0887/4564/0257/files/ashirai_cardboard09.png) no-repeat bottom/contain;
   margin-top: -15.2777777778vw;
   padding: 12.5vw 0 27.0833333333vw;
-  z-index: 1;
+  z-index: 3;
+}
+@media screen and (max-width: 768px) {
+  .p-howto_wrap01 {
+    padding: 25.641025641vw 0 38.4615384615vw;
+  }
 }
 .p-howto_wrap01 .message {
   text-align: center;
@@ -1775,6 +1906,11 @@ top
 .p-howto_wrap01 .contents {
   position: relative;
   justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .p-howto_wrap01 .contents {
+    display: block;
+  }
 }
 .p-howto_wrap01 .contents::before {
   content: "";
@@ -1786,9 +1922,23 @@ top
   top: 26.5rem;
   right: -7.9861111111vw;
 }
+@media screen and (max-width: 768px) {
+  .p-howto_wrap01 .contents::before {
+    width: 51.2820512821vw;
+    top: -25.641025641vw;
+    filter: blur(5px);
+  }
+}
 .p-howto_wrap01 .contents .howto-contents {
   max-width: 112.1rem;
   padding-top: 11.6rem;
+}
+@media screen and (max-width: 768px) {
+  .p-howto_wrap01 .contents .howto-contents {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding-top: 8rem;
+  }
 }
 .p-howto_wrap01 .contents .howto-contents .block {
   position: relative;
@@ -1798,15 +1948,35 @@ top
   background: url(https://cdn.shopify.com/s/files/1/0887/4564/0257/files/sub_bg.png) no-repeat center/cover;
   z-index: 3;
 }
+@media screen and (max-width: 768px) {
+  .p-howto_wrap01 .contents .howto-contents .block {
+    padding: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .p-howto_wrap01 .contents .howto-contents .block .flex {
+    flex-direction: column-reverse;
+  }
+}
 .p-howto_wrap01 .contents .howto-contents .block .left {
   flex-basis: 45%;
   padding-top: 6rem;
+}
+@media screen and (max-width: 768px) {
+  .p-howto_wrap01 .contents .howto-contents .block .left {
+    padding-top: 0;
+  }
 }
 .p-howto_wrap01 .contents .howto-contents .block .left .sub-ttl {
   font-family: "impact", sans-serif;
   font-size: 2.4rem;
   line-height: 1;
   color: #F08301;
+}
+@media screen and (max-width: 768px) {
+  .p-howto_wrap01 .contents .howto-contents .block .left .sub-ttl {
+    font-size: 1.8rem;
+  }
 }
 .p-howto_wrap01 .contents .howto-contents .block .left h3 {
   font-size: 3.6rem;
@@ -1815,10 +1985,22 @@ top
   color: #000;
   margin-bottom: 2rem;
 }
+@media screen and (max-width: 768px) {
+  .p-howto_wrap01 .contents .howto-contents .block .left h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
 .p-howto_wrap01 .contents .howto-contents .block .left .txt {
   line-height: 1.5;
   color: #000;
   max-width: 40rem;
+}
+@media screen and (max-width: 768px) {
+  .p-howto_wrap01 .contents .howto-contents .block .left .txt {
+    max-width: none;
+    margin-bottom: 3rem;
+  }
 }
 .p-howto_wrap01 .contents .howto-contents .block .right {
   flex-basis: 55%;
@@ -1841,6 +2023,11 @@ top
 }
 .p-howto_wrap01 .contents .howto-contents .block .bar span.active {
   background-color: #F08301;
+}
+@media screen and (max-width: 768px) {
+  .p-howto_wrap01 .contents aside {
+    display: none;
+  }
 }
 .p-howto_wrap01 .contents aside .step-list {
   position: sticky;
@@ -1872,13 +2059,30 @@ top
   padding: 12.5vw 0 27.0833333333vw;
   z-index: 1;
 }
+@media screen and (max-width: 768px) {
+  .p-itemlist_wrap01 {
+    background: url(https://cdn.shopify.com/s/files/1/0887/4564/0257/files/ashirai_cardboard08.png) no-repeat top/contain;
+    padding: 12.8205128205vw 0 51.2820512821vw;
+  }
+}
 .p-itemlist_wrap01 .contents {
   position: relative;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  .p-itemlist_wrap01 .contents {
+    flex-direction: column-reverse;
+  }
+}
 .p-itemlist_wrap01 .contents .list-contents {
   width: 93.8rem;
   padding-top: 11.6rem;
+}
+@media screen and (max-width: 768px) {
+  .p-itemlist_wrap01 .contents .list-contents {
+    width: 100%;
+    padding-top: 6rem;
+  }
 }
 .p-itemlist_wrap01 .contents .list-contents .itemlist {
   flex-wrap: wrap;
@@ -1886,17 +2090,39 @@ top
        column-gap: 4rem;
   row-gap: 8rem;
 }
+@media screen and (max-width: 768px) {
+  .p-itemlist_wrap01 .contents .list-contents .itemlist {
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+    row-gap: 4rem;
+  }
+}
 .p-itemlist_wrap01 .contents .list-contents .itemlist .item-card {
   width: calc(33.3333333333% - 2.6666666667rem);
+}
+@media screen and (max-width: 768px) {
+  .p-itemlist_wrap01 .contents .list-contents .itemlist .item-card {
+    width: calc(50% - 0.75rem);
+  }
 }
 .p-itemlist_wrap01 .contents aside .catelist {
   position: sticky;
   top: 5rem;
   padding-top: 11.6rem;
 }
+@media screen and (max-width: 768px) {
+  .p-itemlist_wrap01 .contents aside .catelist {
+    padding-top: 6rem;
+  }
+}
 .p-itemlist_wrap01 .contents aside .catelist .box {
   padding: 2.4rem;
   background: url(https://cdn.shopify.com/s/files/1/0887/4564/0257/files/sub_bg.png) no-repeat center/cover;
+}
+@media screen and (max-width: 768px) {
+  .p-itemlist_wrap01 .contents aside .catelist .box {
+    padding: 2rem 1.5rem;
+  }
 }
 .p-itemlist_wrap01 .contents aside .catelist .box p, .p-itemlist_wrap01 .contents aside .catelist .box a {
   color: #000;
@@ -1906,11 +2132,27 @@ top
   font-weight: 700;
   margin-bottom: 4rem;
 }
+@media screen and (max-width: 768px) {
+  .p-itemlist_wrap01 .contents aside .catelist .box .allitems {
+    margin-bottom: 1.5rem;
+  }
+}
 .p-itemlist_wrap01 .contents aside .catelist .box .allitems a:hover {
   color: #F08301;
 }
 .p-itemlist_wrap01 .contents aside .catelist .box .allitems a.active {
   color: #F08301;
+}
+@media screen and (max-width: 768px) {
+  .p-itemlist_wrap01 .contents aside .catelist .box .sp-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 768px) {
+  .p-itemlist_wrap01 .contents aside .catelist .box nav {
+    flex-basis: 49%;
+  }
 }
 .p-itemlist_wrap01 .contents aside .catelist .box nav p {
   display: flex;
@@ -1919,6 +2161,12 @@ top
   padding-bottom: 1rem;
   border-bottom: 1px solid #221505;
   margin-bottom: 0.8rem;
+}
+@media screen and (max-width: 768px) {
+  .p-itemlist_wrap01 .contents aside .catelist .box nav p {
+    gap: 0.5rem;
+    font-size: 1.3rem;
+  }
 }
 .p-itemlist_wrap01 .contents aside .catelist .box nav a:hover {
   color: #F08301;
@@ -1934,6 +2182,11 @@ top
 .p-itemlist_wrap01 .contents aside .catelist .box nav li {
   position: relative;
   padding-left: 2.8rem;
+}
+@media screen and (max-width: 768px) {
+  .p-itemlist_wrap01 .contents aside .catelist .box nav li {
+    padding-left: 1.5rem;
+  }
 }
 .p-itemlist_wrap01 .contents aside .catelist .box nav li::before {
   position: absolute;
@@ -1954,8 +2207,19 @@ top
     left: 0;
   }
 }
+@media screen and (max-width: 768px) {
+  .p-itemlist_wrap01 .contents aside .catelist .box nav li a {
+    font-size: 1.3rem;
+    letter-spacing: 0;
+  }
+}
 .p-itemlist_wrap01 .contents aside .catelist .box nav.nav01 {
   margin-bottom: 4rem;
+}
+@media screen and (max-width: 768px) {
+  .p-itemlist_wrap01 .contents aside .catelist .box nav.nav01 {
+    margin-bottom: 0;
+  }
 }
 
 /*************************************************
@@ -1966,7 +2230,7 @@ top
 }
 @media screen and (max-width: 768px) {
   .p-itemdetail {
-    padding: 12rem 0 6rem;
+    padding: 14rem 0 6rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1982,7 +2246,8 @@ top
 @media screen and (max-width: 768px) {
   .p-itemdetail .item-content {
     flex-direction: column;
-    margin-bottom: 6rem;
+    gap: 3rem;
+    margin-bottom: 2rem;
   }
 }
 .p-itemdetail .img-content {
@@ -2228,7 +2493,7 @@ top
     width: 100%;
     font-size: 1.4rem;
     padding-top: 0.5rem;
-    border-bottom: 3px dotted #F08301;
+    border-bottom: 1px dashed #221505;
   }
 }
 .p-itemdetail.detail-top {
@@ -2242,11 +2507,16 @@ top
 }
 @media screen and (max-width: 768px) {
   .p-itemdetail.detail-bottom {
-    padding: 8rem 0 10rem;
+    padding: 6rem 0 30.7692307692vw;
   }
 }
 .p-itemdetail.detail-bottom .head-ttl {
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .p-itemdetail.detail-bottom .head-ttl .sub-ttl {
+    font-size: 3.2rem;
+  }
 }
 .p-itemdetail.detail-bottom .flex {
   gap: 2.5rem;
@@ -2361,6 +2631,11 @@ top
   padding: 12.5vw 0 27.0833333333vw;
   z-index: 1;
 }
+@media screen and (max-width: 768px) {
+  .p-company_wrap01, .p-term_wrap01 {
+    padding: 15.3846153846vw 0 30.7692307692vw;
+  }
+}
 .p-company_wrap01 .inner, .p-term_wrap01 .inner {
   max-width: 100rem;
 }
@@ -2373,6 +2648,7 @@ top
 @media screen and (max-width: 768px) {
   .p-company_wrap01 table, .p-term_wrap01 table {
     padding: 2rem;
+    border-spacing: 0;
   }
 }
 .p-company_wrap01 table tr:last-of-type th, .p-company_wrap01 table tr:last-of-type td, .p-term_wrap01 table tr:last-of-type th, .p-term_wrap01 table tr:last-of-type td {
@@ -2414,6 +2690,7 @@ top
     display: block;
     width: 100%;
     font-size: 1.3rem;
+    padding: 1rem 0 1.5rem;
   }
 }
 .p-company_wrap01 table tr td span, .p-term_wrap01 table tr td span {
@@ -2422,6 +2699,11 @@ top
 
 .p-company_wrap01 {
   background: url(https://cdn.shopify.com/s/files/1/0887/4564/0257/files/ashirai_cardboard08.png) no-repeat top/cover;
+}
+@media screen and (max-width: 768px) {
+  .p-company_wrap01 {
+    background: url(https://cdn.shopify.com/s/files/1/0887/4564/0257/files/ashirai_cardboard08.png) no-repeat top/contain;
+  }
 }
 
 /*************************************************
@@ -2432,6 +2714,11 @@ top
   margin-top: -15.2777777778vw;
   padding: 12.5vw 0 27.0833333333vw;
   z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .p-policy_wrap01 {
+    padding: 15.3846153846vw 0 30.7692307692vw;
+  }
 }
 .p-policy_wrap01 .inner {
   padding-top: 4rem;
@@ -2485,6 +2772,11 @@ top
   padding: 12.5vw 0 17.3611111111vw;
   z-index: 1;
 }
+@media screen and (max-width: 768px) {
+  .p-faq_wrap01 {
+    padding: 15.3846153846vw 0 30.7692307692vw;
+  }
+}
 .p-faq_wrap01 .anker_wrap {
   max-width: 110rem;
   justify-content: space-between;
@@ -2494,14 +2786,15 @@ top
 @media screen and (max-width: 1000px) {
   .p-faq_wrap01 .anker_wrap {
     gap: 1.5rem;
+    margin-bottom: 6.8rem;
   }
 }
 @media screen and (max-width: 768px) {
   .p-faq_wrap01 .anker_wrap {
     max-width: 40rem;
     flex-direction: column;
-    gap: 2rem;
-    margin: 0 auto;
+    gap: 0.5rem;
+    margin: 0 auto 6.8rem;
   }
 }
 .p-faq_wrap01 .box {
@@ -2513,7 +2806,9 @@ top
 @media screen and (max-width: 768px) {
   .p-faq_wrap01 .box {
     width: 100%;
-    aspect-ratio: 1/0.2;
+    aspect-ratio: 1/0.25;
+    border-radius: 0;
+    border-bottom: 2px dotted #fff;
   }
 }
 .p-faq_wrap01 .box a {
@@ -2528,9 +2823,9 @@ top
 }
 @media screen and (max-width: 768px) {
   .p-faq_wrap01 .box a {
-    justify-content: flex-start;
-    gap: 7.6923076923vw;
-    padding-left: 6.1538461538vw;
+    flex-direction: row;
+    gap: 6.1538461538vw;
+    padding-right: 7.6923076923vw;
   }
 }
 .p-faq_wrap01 .box a .img {
@@ -2609,7 +2904,7 @@ top
 @media screen and (max-width: 768px) {
   .p-faq_wrap01 .block h2 {
     font-size: 1.6rem;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
     margin-bottom: 0;
   }
 }
@@ -2639,7 +2934,8 @@ top
 @media screen and (max-width: 768px) {
   .p-faq_wrap01 .qa-list .qa::before {
     width: 2rem;
-    top: 3rem;
+    top: 2.2rem;
+    right: 0;
   }
 }
 .p-faq_wrap01 .qa-list .qa dt {
@@ -2654,7 +2950,7 @@ top
 }
 @media screen and (max-width: 768px) {
   .p-faq_wrap01 .qa-list .qa dt {
-    max-width: 28rem;
+    max-width: 29rem;
     font-size: 1.4rem;
     line-height: 1.5;
     letter-spacing: 2px;
@@ -2664,6 +2960,11 @@ top
 }
 .p-faq_wrap01 .qa-list .qa dt img {
   width: 2.5rem;
+}
+@media screen and (max-width: 768px) {
+  .p-faq_wrap01 .qa-list .qa dt img {
+    width: 1.8rem;
+  }
 }
 .p-faq_wrap01 .qa-list .qa dd {
   margin-top: 3rem;
@@ -2976,6 +3277,12 @@ top
   max-width: 80rem;
   margin: 0 auto;
   z-index: 10;
+}
+@media screen and (max-width: 768px) {
+  #judgeme_product_reviews .jdgm-rev-widg {
+    width: 90%;
+    max-width: 50rem;
+  }
 }
 #judgeme_product_reviews .jdgm-form {
   padding: 4rem 2rem;

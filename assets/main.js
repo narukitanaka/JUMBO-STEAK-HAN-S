@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       delay: 0, // 途切れなくループ
     },
     breakpoints: {
-      769: {
+      768: {
         slidesPerView: 4,
       }
     },
@@ -211,39 +211,39 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
   // //商品詳細 おすすめ
-  // var itemdetail_recommendswiper; 
-  // $(window).on('load resize', function(){
-  //     var w = $(window).width();
-  //     if (w <= 1000) {
-  //       if (itemdetail_recommendswiper) {
-  //         return;
-  //       } else {
-  //         itemdetail_recommendswiper = new Swiper('.recommend_swiper', {
-  //           autoplay: {
-  //             delay: 3000,
-  //           },
-  //           scrollbar: {
-  //             el: '.swiper-scrollbar', //要素指定
-  //           },
-  //           breakpoints: {
-  //             360: {
-  //               slidesPerView: 1.7,
-  //               spaceBetween: 20,
-  //             },
-  //             769: {
-  //               slidesPerView: 2,
-  //               spaceBetween: 20,
-  //             }
-  //           },
-  //         });
-  //       }
-  //     } else {
-  //         if (itemdetail_recommendswiper) {
-  //           itemdetail_recommendswiper.destroy();
-  //           itemdetail_recommendswiper = undefined;
-  //         } 
-  //     } 
-  // });
+  var itemdetail_recommendswiper; 
+  $(window).on('load resize', function(){
+      var w = $(window).width();
+      if (w <= 1100) {
+        if (itemdetail_recommendswiper) {
+          return;
+        } else {
+          itemdetail_recommendswiper = new Swiper('.recommend_swiper', {
+            autoplay: {
+              delay: 3000,
+            },
+            scrollbar: {
+              el: '.swiper-scrollbar', //要素指定
+            },
+            breakpoints: {
+              360: {
+                slidesPerView: 1.7,
+                spaceBetween: 20,
+              },
+              769: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              }
+            },
+          });
+        }
+      } else {
+          if (itemdetail_recommendswiper) {
+            itemdetail_recommendswiper.destroy();
+            itemdetail_recommendswiper = undefined;
+          } 
+      } 
+  });
 
 
 });
