@@ -708,7 +708,7 @@ footer
 *************************************************/
 footer {
   position: relative;
-  margin-top: -13.1944444444vw;
+  margin-top: -11.8055555556vw;
   padding-top: 6.25vw;
   background: url(https://cdn.shopify.com/s/files/1/0887/4564/0257/files/ashirai_cardboard05.png) no-repeat top/contain;
   z-index: 2;
@@ -1134,6 +1134,7 @@ top
 }
 .p-top_wrap02 .block .left .img-box {
   width: 41rem;
+  aspect-ratio: 1/1.44;
 }
 @media screen and (max-width: 768px) {
   .p-top_wrap02 .block .left .img-box {
@@ -1517,6 +1518,22 @@ top
     margin-top: -25.641025641vw;
   }
 }
+@media screen and (max-width: 768px) {
+  .under-common_wrap .block {
+    position: relative;
+  }
+}
+@media screen and (max-width: 768px) {
+  .under-common_wrap .block::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
 .under-common_wrap .block .inner {
   max-width: 86.1111111111vw;
 }
@@ -1680,7 +1697,7 @@ top
 　ABOUT
 *************************************************/
 .p-about_wrap01 {
-  background: url(https://cdn.shopify.com/s/files/1/0887/4564/0257/files/p-about_img01.png) no-repeat bottom/cover;
+  background: url(https://cdn.shopify.com/s/files/1/0887/4564/0257/files/p-about_img01.png) no-repeat top/cover;
   background-color: #000;
   padding-bottom: 35.4166666667vw;
 }
