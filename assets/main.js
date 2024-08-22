@@ -1,3 +1,16 @@
+window.onload = function() {
+  var loading = document.getElementById('loading');
+
+  // ローディング画面をフェードアウトさせるためのスタイル
+  loading.style.transition = "opacity 0.5s ease";
+  loading.style.opacity = 0;
+
+  // 少し遅延してからローディング要素を非表示にし、コンテンツを表示
+  setTimeout(function() {
+    loading.style.display = 'none';
+  }, 500); // 500ミリ秒後に実行
+};
+
 ///////////////////////////////////////////
 //ハンバーガーメニュー
 //////////////////////////////////////////
@@ -94,48 +107,95 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
   //TOP　商品一覧スライダー
-  var rankingswiper; 
-  $(window).on('load resize', function(){
-      var w = $(window).width();
-      if (w <= 1100) {
-        if (rankingswiper) {
-          return;
-        } else {
-          rankingswiper = new Swiper('.ranking-swiper', {
-            autoplay: {
-              delay: 3000,
-            },
-            scrollbar: {
-              el: '.swiper-scrollbar', //要素指定
-            },
-            mousewheel: {
-              forceToAxis: true,
-              sensitivity: 3
-            },
-            breakpoints: {
-              360: {
-                slidesPerView: 2.4,
-                spaceBetween: 15,
-              },
-              769: {
-                slidesPerView: 4,
-                spaceBetween: 50,
-              }
-            },
-          });
-        }
-      } else {
-        const itemlistswiper = new Swiper('.ranking-swiper', {
-          loop: true,
-          slidesPerView: 4,
-          spaceBetween: 50,
-          mousewheel: {
-            forceToAxis: true,
-            sensitivity: 3
+  // var rankingswiper; 
+  // $(window).on('load resize', function(){
+  //     var w = $(window).width();
+  //     if (w <= 1100) {
+  //       if (rankingswiper) {
+  //         return;
+  //       } else {
+  //         rankingswiper = new Swiper('.ranking-swiper', {
+  //           autoplay: {
+  //             delay: 3000,
+  //           },
+  //           scrollbar: {
+  //             el: '.swiper-scrollbar', //要素指定
+  //           },
+  //           mousewheel: {
+  //             forceToAxis: true,
+  //             sensitivity: 3
+  //           },
+  //           breakpoints: {
+  //             360: {
+  //               slidesPerView: 2.4,
+  //               spaceBetween: 15,
+  //             },
+  //             769: {
+  //               slidesPerView: 4,
+  //               spaceBetween: 50,
+  //             }
+  //           },
+  //         });
+  //       }
+  //     } else {
+  //       const itemlistswiper = new Swiper('.ranking-swiper', {
+  //         loop: true,
+  //         slidesPerView: 4,
+  //         spaceBetween: 50,
+  //         mousewheel: {
+  //           forceToAxis: true,
+  //           sensitivity: 3
+  //         },
+  //       });
+  //     } 
+  // });
+  var rankingswiper;
+  function initSwiper() {
+    var w = $(window).width();
+    // 現在のSwiperインスタンスを破棄する
+    if (rankingswiper) {
+      rankingswiper.destroy(true, true);
+      rankingswiper = null;
+    }
+
+    if (w <= 1100) {
+      // モバイル向けのSwiper設定
+      rankingswiper = new Swiper('.ranking-swiper', {
+        autoplay: {
+          delay: 3000,
+        },
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+        mousewheel: {
+          forceToAxis: true,
+          sensitivity: 3
+        },
+        breakpoints: {
+          360: {
+            slidesPerView: 2.4,
+            spaceBetween: 15,
           },
-        });
-      } 
-  });
+          769: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          }
+        },
+      });
+    } else {
+      // PC向けのSwiper設定
+      rankingswiper = new Swiper('.ranking-swiper', {
+        loop: true,
+        slidesPerView: 4,
+        spaceBetween: 50,
+        mousewheel: {
+          forceToAxis: true,
+          sensitivity: 3
+        },
+      });
+    }
+  }
+  $(window).on('load resize', initSwiper);
 
 
   //TOP　無限スライダー
@@ -221,34 +281,41 @@ document.addEventListener('DOMContentLoaded', (event) => {
 // GSAPアニメーション
 ///////////////////////////////////////////////////////////////////////////////////////
 //テキストアニメ
-document.querySelectorAll('.anime-ttl01').forEach(function(elem) {
-  gsap.to(elem.querySelectorAll('span'), {
-    y: 0,
-    stagger: 0.05,
-    duration: 0.3,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: elem,
-      start: 'top 90%'
-    }
-  });
-});
-
-//順番にフェードイン
-document.querySelectorAll('.fade_triger').forEach(trigger => {
-  gsap.fromTo(trigger.querySelectorAll('.anime-fade'), 
-    { opacity: 0, y: -10 }, 
-    {
-      opacity: 1,
+window.addEventListener('load', (event) => {
+  setTimeout(() => {
+  document.querySelectorAll('.anime-ttl01').forEach(function(elem) {
+    gsap.to(elem.querySelectorAll('span'), {
       y: 0,
-      duration: 1,
-      stagger: 0.5, // 順番にフェードインする間隔
+      stagger: 0.05,
+      duration: 0.3,
+      ease: "power2.out",
       scrollTrigger: {
-        trigger: trigger,
-        start: "top 50%", 
+        trigger: elem,
+        start: 'top 90%'
       }
-    }
-  );
+    });
+  });
+  
+  //順番にフェードイン
+  document.querySelectorAll('.fade_triger').forEach(trigger => {
+    gsap.fromTo(trigger.querySelectorAll('.anime-fade'), 
+      { opacity: 0, y: -10 }, 
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: 0.5, // 順番にフェードインする間隔
+        scrollTrigger: {
+          trigger: trigger,
+          start: "top 60%", 
+        }
+      }
+    );
+  });
+
+  // ScrollTriggerの設定をリフレッシュ
+  ScrollTrigger.refresh();
+}, 1000);
 });
 
 
