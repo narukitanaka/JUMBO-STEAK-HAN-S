@@ -107,48 +107,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
   //TOP　商品一覧スライダー
-  // var rankingswiper; 
-  // $(window).on('load resize', function(){
-  //     var w = $(window).width();
-  //     if (w <= 1100) {
-  //       if (rankingswiper) {
-  //         return;
-  //       } else {
-  //         rankingswiper = new Swiper('.ranking-swiper', {
-  //           autoplay: {
-  //             delay: 3000,
-  //           },
-  //           scrollbar: {
-  //             el: '.swiper-scrollbar', //要素指定
-  //           },
-  //           mousewheel: {
-  //             forceToAxis: true,
-  //             sensitivity: 3
-  //           },
-  //           breakpoints: {
-  //             360: {
-  //               slidesPerView: 2.4,
-  //               spaceBetween: 15,
-  //             },
-  //             769: {
-  //               slidesPerView: 4,
-  //               spaceBetween: 50,
-  //             }
-  //           },
-  //         });
-  //       }
-  //     } else {
-  //       const itemlistswiper = new Swiper('.ranking-swiper', {
-  //         loop: true,
-  //         slidesPerView: 4,
-  //         spaceBetween: 50,
-  //         mousewheel: {
-  //           forceToAxis: true,
-  //           sensitivity: 3
-  //         },
-  //       });
-  //     } 
-  // });
   var rankingswiper;
   function initSwiper() {
     var w = $(window).width();
@@ -190,7 +148,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         spaceBetween: 50,
         mousewheel: {
           forceToAxis: true,
-          sensitivity: 3
+          sensitivity: 0.1
         },
       });
     }
