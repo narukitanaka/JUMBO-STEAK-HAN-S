@@ -1608,11 +1608,13 @@ top
     padding: 19.7435897436vw 0 35.8974358974vw;
   }
 }
-.under-common_wrap .block.lineup .inner .head-ttl, .under-common_wrap .block.lineup .inner .btn-wrap {
+.under-common_wrap .block.lineup .inner .head-ttl,
+.under-common_wrap .block.lineup .inner .btn-wrap {
   max-width: 20.4rem;
 }
 @media screen and (max-width: 768px) {
-  .under-common_wrap .block.lineup .inner .head-ttl, .under-common_wrap .block.lineup .inner .btn-wrap {
+  .under-common_wrap .block.lineup .inner .head-ttl,
+  .under-common_wrap .block.lineup .inner .btn-wrap {
     max-width: none;
   }
 }
@@ -1717,7 +1719,8 @@ top
     padding-bottom: 92.3076923077vw;
   }
 }
-.p-about_wrap01 h2, .p-about_wrap01 p {
+.p-about_wrap01 h2,
+.p-about_wrap01 p {
   text-align: center;
 }
 .p-about_wrap01 h2 {
@@ -1998,7 +2001,7 @@ top
   font-family: "impact", sans-serif;
   font-size: 2.4rem;
   line-height: 1;
-  color: #F08301;
+  color: #f08301;
 }
 @media screen and (max-width: 768px) {
   .p-howto_wrap01 .contents .howto-contents .block .left .sub-ttl {
@@ -2049,7 +2052,7 @@ top
   border-radius: 100vmax;
 }
 .p-howto_wrap01 .contents .howto-contents .block .bar span.active {
-  background-color: #F08301;
+  background-color: #f08301;
 }
 @media screen and (max-width: 768px) {
   .p-howto_wrap01 .contents aside {
@@ -2068,7 +2071,7 @@ top
   width: 7rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  background-color: #F08301;
+  background-color: #f08301;
   font-family: "impact", sans-serif;
   font-size: 3.4rem;
   display: flex;
@@ -2151,7 +2154,8 @@ top
     padding: 2rem 1.5rem;
   }
 }
-.p-itemlist_wrap01 .contents aside .catelist .box p, .p-itemlist_wrap01 .contents aside .catelist .box a {
+.p-itemlist_wrap01 .contents aside .catelist .box p,
+.p-itemlist_wrap01 .contents aside .catelist .box a {
   color: #000;
   transition: all 0.3s;
 }
@@ -2165,10 +2169,10 @@ top
   }
 }
 .p-itemlist_wrap01 .contents aside .catelist .box .allitems a:hover {
-  color: #F08301;
+  color: #f08301;
 }
 .p-itemlist_wrap01 .contents aside .catelist .box .allitems a.active {
-  color: #F08301;
+  color: #f08301;
 }
 @media screen and (max-width: 768px) {
   .p-itemlist_wrap01 .contents aside .catelist .box .sp-flex {
@@ -2196,10 +2200,10 @@ top
   }
 }
 .p-itemlist_wrap01 .contents aside .catelist .box nav a:hover {
-  color: #F08301;
+  color: #f08301;
 }
 .p-itemlist_wrap01 .contents aside .catelist .box nav a.active {
-  color: #F08301;
+  color: #f08301;
 }
 .p-itemlist_wrap01 .contents aside .catelist .box nav ul {
   display: flex;
@@ -2226,7 +2230,7 @@ top
   border-style: solid;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-left: 7px solid #F08301;
+  border-left: 7px solid #f08301;
   border-right: 0;
 }
 @media screen and (max-width: 768px) {
@@ -2413,7 +2417,7 @@ top
 .p-itemdetail .detail-content .item-count .product-quantity button {
   width: 6rem;
   font-weight: 500;
-  background-color: #6A6A6A;
+  background-color: #6a6a6a;
 }
 .p-itemdetail .detail-content .item-count .product-quantity input {
   width: initial;
@@ -2466,6 +2470,8 @@ top
   }
 }
 .p-itemdetail .detail-content .txt {
+  font-size: 1.6rem;
+  line-height: 1.7;
   color: #fff;
   margin-bottom: 5.1rem;
 }
@@ -2473,6 +2479,9 @@ top
   .p-itemdetail .detail-content .txt {
     font-size: 1.4rem;
   }
+}
+.p-itemdetail .detail-content .txt span {
+  color: #fff;
 }
 .p-itemdetail .detail-content .item-infomation {
   background-color: #fff;
@@ -2493,7 +2502,8 @@ top
 .p-itemdetail .detail-content .item-infomation table tr:first-of-type {
   border-top: 1px dashed #221505;
 }
-.p-itemdetail .detail-content .item-infomation table th, .p-itemdetail .detail-content .item-infomation table td {
+.p-itemdetail .detail-content .item-infomation table th,
+.p-itemdetail .detail-content .item-infomation table td {
   padding: 1.5rem 0;
   color: #221505;
 }
@@ -2644,7 +2654,7 @@ top
 }
 @media screen and (max-width: 768px) {
   .p-itemdetail.detail-bottom .swiper-scrollbar .swiper-scrollbar-drag {
-    background-color: #3F3B3A;
+    background-color: #3f3b3a;
     border-radius: 0;
   }
 }
@@ -2652,46 +2662,61 @@ top
 /*************************************************
 　会社概要・特商法
 *************************************************/
-.p-company_wrap01, .p-term_wrap01 {
+.p-company_wrap01,
+.p-term_wrap01 {
   background: url(https://cdn.shopify.com/s/files/1/0887/4564/0257/files/ashirai_cardboard08.png) no-repeat top/contain;
   margin-top: -15.2777777778vw;
   padding: 12.5vw 0 27.0833333333vw;
   z-index: 1;
 }
 @media screen and (max-width: 768px) {
-  .p-company_wrap01, .p-term_wrap01 {
+  .p-company_wrap01,
+  .p-term_wrap01 {
     padding: 15.3846153846vw 0 30.7692307692vw;
   }
 }
-.p-company_wrap01 .inner, .p-term_wrap01 .inner {
+.p-company_wrap01 .inner,
+.p-term_wrap01 .inner {
   max-width: 100rem;
 }
-.p-company_wrap01 table, .p-term_wrap01 table {
+.p-company_wrap01 table,
+.p-term_wrap01 table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 1.5rem 0;
   padding-top: 4rem;
 }
 @media screen and (max-width: 768px) {
-  .p-company_wrap01 table, .p-term_wrap01 table {
+  .p-company_wrap01 table,
+  .p-term_wrap01 table {
     padding: 2rem;
     border-spacing: 0;
   }
 }
-.p-company_wrap01 table tr:last-of-type th, .p-company_wrap01 table tr:last-of-type td, .p-term_wrap01 table tr:last-of-type th, .p-term_wrap01 table tr:last-of-type td {
+.p-company_wrap01 table tr:last-of-type th,
+.p-company_wrap01 table tr:last-of-type td,
+.p-term_wrap01 table tr:last-of-type th,
+.p-term_wrap01 table tr:last-of-type td {
   border-bottom: none;
 }
-.p-company_wrap01 table tr th, .p-company_wrap01 table tr td, .p-term_wrap01 table tr th, .p-term_wrap01 table tr td {
+.p-company_wrap01 table tr th,
+.p-company_wrap01 table tr td,
+.p-term_wrap01 table tr th,
+.p-term_wrap01 table tr td {
   font-size: 1.5rem;
   letter-spacing: 2px;
   line-height: 2;
 }
 @media screen and (max-width: 768px) {
-  .p-company_wrap01 table tr th, .p-company_wrap01 table tr td, .p-term_wrap01 table tr th, .p-term_wrap01 table tr td {
+  .p-company_wrap01 table tr th,
+  .p-company_wrap01 table tr td,
+  .p-term_wrap01 table tr th,
+  .p-term_wrap01 table tr td {
     line-height: 1.7;
   }
 }
-.p-company_wrap01 table tr th, .p-term_wrap01 table tr th {
+.p-company_wrap01 table tr th,
+.p-term_wrap01 table tr th {
   width: 20%;
   font-weight: 600;
   padding: 1.5rem 0;
@@ -2699,7 +2724,8 @@ top
   border-bottom: 2px dotted #fff;
 }
 @media screen and (max-width: 768px) {
-  .p-company_wrap01 table tr th, .p-term_wrap01 table tr th {
+  .p-company_wrap01 table tr th,
+  .p-term_wrap01 table tr th {
     display: block;
     width: 100%;
     padding-bottom: 0;
@@ -2707,20 +2733,23 @@ top
     font-size: 1.4rem;
   }
 }
-.p-company_wrap01 table tr td, .p-term_wrap01 table tr td {
+.p-company_wrap01 table tr td,
+.p-term_wrap01 table tr td {
   font-weight: 400;
   padding: 1.5rem 0;
   border-bottom: 2px dotted #fff;
 }
 @media screen and (max-width: 768px) {
-  .p-company_wrap01 table tr td, .p-term_wrap01 table tr td {
+  .p-company_wrap01 table tr td,
+  .p-term_wrap01 table tr td {
     display: block;
     width: 100%;
     font-size: 1.3rem;
     padding: 1rem 0 1.5rem;
   }
 }
-.p-company_wrap01 table tr td span, .p-term_wrap01 table tr td span {
+.p-company_wrap01 table tr td span,
+.p-term_wrap01 table tr td span {
   color: #f00;
 }
 
@@ -2750,7 +2779,10 @@ top
 .p-policy_wrap01 .inner {
   padding-top: 4rem;
 }
-.p-policy_wrap01 h3, .p-policy_wrap01 p, .p-policy_wrap01 li, .p-policy_wrap01 a {
+.p-policy_wrap01 h3,
+.p-policy_wrap01 p,
+.p-policy_wrap01 li,
+.p-policy_wrap01 a {
   color: #fff;
   line-height: 2;
 }
@@ -2778,11 +2810,13 @@ top
     margin-bottom: 1rem;
   }
 }
-.p-policy_wrap01 .block p, .p-policy_wrap01 .block a {
+.p-policy_wrap01 .block p,
+.p-policy_wrap01 .block a {
   font-size: 1.5rem;
 }
 @media screen and (max-width: 768px) {
-  .p-policy_wrap01 .block p, .p-policy_wrap01 .block a {
+  .p-policy_wrap01 .block p,
+  .p-policy_wrap01 .block a {
     font-size: 1.2rem;
   }
 }
@@ -3191,7 +3225,8 @@ top
     font-size: 1.4rem;
   }
 }
-.p-contact_wrap01 .form_wrap form table tr td input, .p-contact_wrap01 .form_wrap form table tr td textarea {
+.p-contact_wrap01 .form_wrap form table tr td input,
+.p-contact_wrap01 .form_wrap form table tr td textarea {
   width: 100%;
   background-color: #fff;
   padding: 15px 25px;
@@ -3202,7 +3237,8 @@ top
   border: 1px solid rgba(39, 17, 5, 0.8);
 }
 @media screen and (max-width: 768px) {
-  .p-contact_wrap01 .form_wrap form table tr td input, .p-contact_wrap01 .form_wrap form table tr td textarea {
+  .p-contact_wrap01 .form_wrap form table tr td input,
+  .p-contact_wrap01 .form_wrap form table tr td textarea {
     padding: 1rem;
   }
 }
@@ -3308,7 +3344,7 @@ top
   display: block;
   font-size: 16px !important;
   text-align: center;
-  color: #DD0000;
+  color: #dd0000;
   margin-bottom: 4rem;
   position: sticky;
 }
@@ -3345,7 +3381,10 @@ top
   font-size: 16px;
 }
 
-.jdgm-form input[type=text], .jdgm-form input[type=email], .jdgm-form input[type=url], .jdgm-form textarea {
+.jdgm-form input[type=text],
+.jdgm-form input[type=email],
+.jdgm-form input[type=url],
+.jdgm-form textarea {
   font-size: 14px;
 }
 
@@ -3357,25 +3396,39 @@ top
 /*************************************************
   検索結果
 *************************************************/
-.title-wrapper-with-link h1, .title-wrapper-with-link p, .title-wrapper-with-link a {
+.title-wrapper-with-link h1,
+.title-wrapper-with-link p,
+.title-wrapper-with-link a {
   color: #fff;
 }
 
 .template-search {
   text-align: center;
 }
-.template-search h1, .template-search h2, .template-search h3, .template-search p, .template-search a, .template-search div {
+.template-search h1,
+.template-search h2,
+.template-search h3,
+.template-search p,
+.template-search a,
+.template-search div {
   color: #fff;
 }
 
 /*************************************************
 カート
 *************************************************/
-.custom-cart h1, .custom-cart h2, .custom-cart div, .custom-cart p, .custom-cart a, .custom-cart th, .custom-cart td, .custom-cart span {
+.custom-cart h1,
+.custom-cart h2,
+.custom-cart div,
+.custom-cart p,
+.custom-cart a,
+.custom-cart th,
+.custom-cart td,
+.custom-cart span {
   color: #fff;
 }
 .custom-cart .button {
-  background-color: #F08301;
+  background-color: #f08301;
   font-weight: 500;
 }
 .custom-cart .button--tertiary {
@@ -3404,14 +3457,17 @@ top
 /*************************************************
 マイページ
 *************************************************/
-.customer h1, .customer h2, .customer p, .customer a {
+.customer h1,
+.customer h2,
+.customer p,
+.customer a {
   color: #fff;
 }
 .customer h1 {
   font-weight: 500;
 }
 .customer button {
-  background-color: #F08301;
+  background-color: #f08301;
   font-weight: 500;
 }
 
